@@ -1,7 +1,68 @@
 <!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <display-name>Servlets CRUD Application</display-name>
+
+  <servlet>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>project.servlets.UploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>InformServlet</servlet-name>
+    <servlet-class>project.servlets.InformServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteFileServlet</servlet-name>
+    <servlet-class>project.servlets.DeleteFileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>project.servlets.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>EventServlet</servlet-name>
+    <servlet-class>project.servlets.EventServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ErrorServlet</servlet-name>
+    <servlet-class>project.servlets.ErrorServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/api/uploads</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InformServlet</servlet-name>
+    <url-pattern>/api/files</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteFileServlet</servlet-name>
+    <url-pattern>/api/del/files</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EventServlet</servlet-name>
+    <url-pattern>/api/events</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/api/downloads</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ErrorServlet</servlet-name>
+    <url-pattern>/api/Error</url-pattern>
+  </servlet-mapping>
+
+  <error-page>
+    <error-code>404</error-code>
+    <location>/api/Error</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.Error</exception-type>
+    <location>/api/Error</location>
+  </error-page>
 </web-app>
