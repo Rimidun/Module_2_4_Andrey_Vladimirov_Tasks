@@ -3,14 +3,14 @@ package project.service.implementation;
 
 import project.entity.User;
 import project.repository.UserRepository;
-import project.repository.implementation.UserRepositoryImpl;
+import project.repository.implementation.UserRepositoryImplementation;
 import project.service.UserService;
 
-public class UserServiceImpl implements UserService {
+public class UserServiceImplementation implements UserService {
     private final UserRepository userRepository;
 
-    public UserServiceImpl() {
-        this.userRepository = new UserRepositoryImpl();
+    public UserServiceImplementation() {
+        this.userRepository = new UserRepositoryImplementation();
     }
 
     @Override

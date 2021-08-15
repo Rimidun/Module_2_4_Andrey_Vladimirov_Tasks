@@ -3,16 +3,16 @@ package project.service.implementation;
 
 import project.entity.File;
 import project.repository.FileRepository;
-import project.repository.implementation.FileRepositoryImpl;
+import project.repository.implementation.FileRepositoryImplementation;
 import project.service.FileService;
 
 import java.util.List;
 
-public class FileServiceImpl implements FileService {
+public class FileServiceImplementation implements FileService {
     private final FileRepository fileRepository;
 
-    public FileServiceImpl() {
-        this.fileRepository = new FileRepositoryImpl();
+    public FileServiceImplementation() {
+        this.fileRepository = new FileRepositoryImplementation();
     }
 
     @Override

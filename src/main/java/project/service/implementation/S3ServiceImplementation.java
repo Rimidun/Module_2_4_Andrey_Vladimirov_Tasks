@@ -2,7 +2,7 @@ package project.service.implementation;
 
 
 import project.repository.S3Repository;
-import project.repository.implementation.S3RepositoryImpl;
+import project.repository.implementation.S3RepositoryImplementation;
 import project.service.S3Service;
 import software.amazon.awssdk.services.s3.model.S3Object;
 
@@ -11,11 +11,11 @@ import java.nio.file.Paths;
 import java.util.List;
 
 
-public class S3ServiceImpl implements S3Service {
+public class S3ServiceImplementation implements S3Service {
     private final S3Repository s3Repository;
 
-    public S3ServiceImpl() {
-        this.s3Repository = new S3RepositoryImpl();
+    public S3ServiceImplementation() {
+        this.s3Repository = new S3RepositoryImplementation();
     }
 
     @Override

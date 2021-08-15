@@ -5,7 +5,7 @@ import org.hibernate.cfg.Configuration;
 import project.entity.Event;
 import project.entity.File;
 import project.entity.User;
-import project.service.implementation.MainServiceImpl;
+import project.service.implementation.MainServiceImplementation;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -42,15 +42,15 @@ public class ObjectFactory {
                 .buildSessionFactory();
     }
 
-    private MainServiceImpl createMainService(){
-        return new MainServiceImpl();
+    private MainServiceImplementation createMainService(){
+        return new MainServiceImplementation();
     }
 
-    public MainServiceImpl getMainService(){
-        MainServiceImpl mainServiceImpl = (MainServiceImpl) beans.get("MainService");
+    public MainServiceImplementation getMainService(){
+        MainServiceImplementation mainServiceImpl = (MainServiceImplementation) beans.get("MainService");
         if(mainServiceImpl == null){
             beans.put("MainService", createMainService());
-            mainServiceImpl = (MainServiceImpl) beans.get("MainService");
+            mainServiceImpl = (MainServiceImplementation) beans.get("MainService");
         }
 
         return mainServiceImpl;

@@ -13,17 +13,17 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class MainServiceImpl implements MainService {
+public class MainServiceImplementation implements MainService {
     private final UserService userService;
     private final FileService fileService;
     private final EventService eventService;
     private final S3Service s3Service;
 
-    public MainServiceImpl() {
-        this.userService = new UserServiceImpl();
-        this.fileService = new FileServiceImpl();
-        this.eventService = new EventServiceImpl();
-        this.s3Service = new S3ServiceImpl();
+    public MainServiceImplementation() {
+        this.userService = new UserServiceImplementation();
+        this.fileService = new FileServiceImplementation();
+        this.eventService = new EventServiceImplementation();
+        this.s3Service = new S3ServiceImplementation();
     }
 
     @Override

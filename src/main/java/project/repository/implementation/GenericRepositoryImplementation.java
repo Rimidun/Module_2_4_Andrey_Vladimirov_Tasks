@@ -9,12 +9,12 @@ import project.repository.GenericRepository;
 
 import java.io.Serializable;
 
-public abstract class GenericRepositoryImpl<T, ID extends Serializable> implements GenericRepository<T, ID> {
+public abstract class GenericRepositoryImplementation<T, ID extends Serializable> implements GenericRepository<T, ID> {
 
     private final SessionFactory sessionFactory;
     private Class<T> entity;
 
-    public GenericRepositoryImpl(Class<T> entity) {
+    public GenericRepositoryImplementation(Class<T> entity) {
         this.entity = entity;
         sessionFactory  = ObjectFactory.getObjectFactory().getSessionFactory();
     }

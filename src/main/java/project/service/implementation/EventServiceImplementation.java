@@ -3,16 +3,16 @@ package project.service.implementation;
 
 import project.entity.Event;
 import project.repository.EventRepository;
-import project.repository.implementation.EventRepositoryImpl;
+import project.repository.implementation.EventRepositoryImplementation;
 import project.service.EventService;
 
 import java.util.List;
 
-public class EventServiceImpl implements EventService {
+public class EventServiceImplementation implements EventService {
     private final EventRepository eventRepository;
 
-    public EventServiceImpl() {
-        this.eventRepository = new EventRepositoryImpl();
+    public EventServiceImplementation() {
+        this.eventRepository = new EventRepositoryImplementation();
     }
 
     @Override

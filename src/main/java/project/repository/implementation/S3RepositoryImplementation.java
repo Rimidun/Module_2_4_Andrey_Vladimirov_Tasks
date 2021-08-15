@@ -13,10 +13,10 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.List;
 
-public class S3RepositoryImpl implements S3Repository {
+public class S3RepositoryImplementation implements S3Repository {
     private final S3Client s3Client;
 
-    public S3RepositoryImpl() {
+    public S3RepositoryImplementation() {
         this.s3Client = S3Client.builder()
                 .region(Region.EU_WEST_3)
                 .build();

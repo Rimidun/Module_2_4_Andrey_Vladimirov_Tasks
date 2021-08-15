@@ -7,9 +7,9 @@ import project.repository.FileRepository;
 
 import java.util.List;
 
-public class FileRepositoryImpl extends GenericRepositoryImpl<File, Long> implements FileRepository {
+public class FileRepositoryImplementation extends GenericRepositoryImplementation<File, Long> implements FileRepository {
 
-    public FileRepositoryImpl() {
+    public FileRepositoryImplementation() {
         super(File.class);
     }
 

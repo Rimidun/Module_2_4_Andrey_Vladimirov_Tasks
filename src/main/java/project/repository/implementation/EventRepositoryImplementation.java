@@ -7,9 +7,9 @@ import project.repository.EventRepository;
 
 import java.util.List;
 
-public class EventRepositoryImpl extends GenericRepositoryImpl<Event, Long> implements EventRepository {
+public class EventRepositoryImplementation extends GenericRepositoryImplementation<Event, Long> implements EventRepository {
 
-    public EventRepositoryImpl() {
+    public EventRepositoryImplementation() {
         super(Event.class);
     }
 
